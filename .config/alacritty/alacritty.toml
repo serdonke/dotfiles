@@ -1,0 +1,16 @@
+
+[window]
+decorations = "None"
+startup_mode = "Maximized"
+opacity = 0.98
+blur = false
+
+[font]
+size = 20
+normal = { family = "SauceCodePro Nerd Font Mono" }
+bold   = { style = "Bold" }
+italic = { style = "Italic"}
+bold_italic = { style = "Bold Italic" }
+
+[general]
+live_config_reload = true
