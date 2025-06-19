@@ -52,6 +52,7 @@ return  { -- Fuzzy Finder (files, lsp, etc)
                         ["<C-k>"] = "move_selection_previous",
                         ["<C-l>"] = "select_default",
                         ["<esc>"] = "close",
+                        ["<C-d>"] = require("telescope.actions").delete_buffer,
                     },
                 },
 
