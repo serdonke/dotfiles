@@ -6,8 +6,8 @@ opacity = 0.98
 blur = false
 
 [font]
-size = 20
-normal = { family = "SauceCodePro Nerd Font Mono" }
+size = 16
+normal = { family = "JetBrainsMono Nerd Font" }
 bold   = { style = "Bold" }
 italic = { style = "Italic"}
 bold_italic = { style = "Bold Italic" }
