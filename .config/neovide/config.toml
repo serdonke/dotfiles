@@ -1,0 +1,13 @@
+fork = true
+idle = true
+maximized = true
+frame = "none"
+vsync = true
+
+[font]
+normal = ["JetBrainsMono Nerd Font"]
+size = 14.5
+
+[box-drawing]
+# "font-glyph", "native" or "selected-native"
+mode = "font-glyph"
