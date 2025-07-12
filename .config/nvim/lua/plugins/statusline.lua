@@ -5,38 +5,41 @@ return {
         "bwpge/lualine-pretty-path",
     },
     config = function()
-        local mode = {
-            "mode",
-            fmt = function(str)
-                local words = vim.split(str, "-")
-                if #words > 1 then
-                    local initials = ""
-                    for _, word in ipairs(words) do
-                        initials = initials .. word:sub(1, 1)
-                    end
-                    return " " .. initials
-                else
-                    return " " .. str:sub(1, 1):upper()
-                end
-            end,
-        }
 
-        require("lualine").setup({
+        -- Bubbles config for lualine
+        -- Author: lokesh-krishna
+        -- MIT license, see LICENSE for more details.
+
+        -- stylua: ignore
+
+        require('lualine').setup {
             options = {
-                theme = vim.g.colors_name or "auto", --NOTE, might break later
-                component_separators = { left = '', right = ''},
-                section_separators = { left = '', right = ''},
+                theme = bubbles_theme,
+                component_separators = '',
+                section_separators = { left = '', right = '' },
             },
-
             sections = {
-                lualine_a = { mode },
-                lualine_c = { "pretty_path" },
+                lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
+                lualine_b = { 'branch' },
+                lualine_c = {
+                    '%=', 'pretty_path'
+                },
                 lualine_x = {},
+                lualine_y = { 'progress' },
+                lualine_z = {
+                    { 'location', separator = { right = '' }, left_padding = 2 },
+                },
             },
-
             inactive_sections = {
-                lualine_c = { "pretty_path" }
-            }
-        })
+                lualine_a = { 'pretty_path' },
+                lualine_b = {},
+                lualine_c = {},
+                lualine_x = {},
+                lualine_y = {},
+                lualine_z = { 'location' },
+            },
+            tabline = {},
+            extensions = {},
+        }
     end,
 }
